@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+.page{min-height:100vh;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#ffe5ef 0%,#fff4f8 29%,#fffafd 62%,#fff 100%);color:#38212d;font-family:'DM Sans',sans-serif;padding:0 24px 26px;display:flex;flex-direction:column}
+.ambient{position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(#ec9db9 1px,transparent 1px);background-size:30px 30px;opacity:.22;mask-image:linear-gradient(to bottom,#000,transparent 72%)}
+.topbar{position:relative;z-index:1;max-width:1120px;width:100%;margin:0 auto;height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f1dbe4}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#38212d;font-weight:700;letter-spacing:-.04em}.brandMark{display:grid;place-items:center;width:38px;height:38px;border-radius:14px;background:linear-gradient(145deg,#ffe3ed,#f6c3d6);color:#b53265;font-family:'Playfair Display',serif;font-size:24px;box-shadow:0 5px 15px #d35c871c}
+.back{display:flex;align-items:center;gap:7px;text-decoration:none;color:#8b6979;font-size:13px;transition:color .2s}.back:hover,.footer a:hover{color:#b53265}
+.shell{position:relative;z-index:1;max-width:700px;width:100%;margin:58px auto 50px;text-align:center;flex:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid #f0d2de;background:#fffafd;border-radius:999px;color:#b44b73;font-size:10px;letter-spacing:.15em;font-weight:700;box-shadow:0 5px 18px #c64b7510}
+.shell>h1,.question,.yesCard h1{font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,68px);line-height:1.08;letter-spacing:-.045em;font-weight:600;margin:26px 0 16px}.shell h1 span,.question span,.yesCard h1 span{color:#c74676}
+.intro{max-width:510px;margin:0 auto 32px;color:#856b79;line-height:1.85;font-size:15px}
+.form{max-width:460px;margin:0 auto;text-align:left;padding:28px;background:rgba(255,255,255,.9);border:1px solid #f0d8e2;border-radius:26px;box-shadow:0 24px 75px #a63d6015;display:grid;gap:18px;backdrop-filter:blur(12px)}
+.form label{display:grid;gap:9px;font-size:12px;font-weight:700;color:#694756}.form input,.copyRow input{width:100%;min-width:0;border:1px solid #ecd5df;border-radius:13px;background:#fff;padding:14px 15px;font:inherit;color:#39232d;outline:none;transition:border-color .2s,box-shadow .2s}.form input:focus,.copyRow input:focus{border-color:#d56b91;box-shadow:0 0 0 4px #f9e1ea}
+.primary,.yesButton{display:inline-flex;justify-content:center;align-items:center;gap:9px;border:0;border-radius:14px;background:linear-gradient(135deg,#d55282,#b93268);color:white;font:700 14px 'DM Sans',sans-serif;padding:15px 20px;cursor:pointer;box-shadow:0 10px 24px #c94d7938;transition:transform .2s,box-shadow .2s,filter .2s}.primary:hover{filter:saturate(1.08);transform:translateY(-2px);box-shadow:0 14px 30px #c94d7945}
+.yesButton:hover{filter:saturate(1.08);transform:translateX(-50%);box-shadow:0 14px 30px #c94d7945}
+.shareBox{max-width:460px;margin:20px auto 0;padding:20px;text-align:left;border:1px solid #f0d4df;background:#fff;border-radius:20px;box-shadow:0 12px 35px #a63d600e}.shareBox>p{font-weight:700;margin:0 0 12px}.copyRow{display:flex;gap:8px}.copyRow input{font-size:11px;padding:11px}.copyButton{flex-shrink:0;border:0;border-radius:11px;padding:0 13px;background:#f9e5ec;color:#a63360;font-weight:700;display:flex;align-items:center;gap:6px;cursor:pointer}.shareBox small{display:block;color:#987f8a;margin-top:11px;line-height:1.5}
+.previewNote{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:25px;color:#957d88;font-size:12px}.previewNote strong{color:#775260}
+.proposalCard,.yesCard{position:relative;overflow:hidden;padding:42px 38px 28px;background:rgba(255,255,255,.88);border:1px solid #f0d4df;border-radius:34px;box-shadow:0 30px 90px #9d35571c,0 4px 18px #bd66850a;backdrop-filter:blur(12px)}
+.bigHeart{display:grid;place-items:center;margin:0 auto 20px;width:82px;height:82px;border-radius:28px;transform:rotate(-5deg);background:linear-gradient(145deg,#ffe8f0,#f7bfd3);color:#c74676;box-shadow:inset 0 1px 0 #fff9}
+.toLine{font-family:'Playfair Display',serif;font-size:27px;margin:10px 0 0}.question{font-size:clamp(40px,7vw,62px);margin:15px 0 17px}.message{max-width:445px;margin:0 auto;color:#806775;line-height:1.95;font-size:14px}.fromLine{margin:24px 0 0;color:#987b88;font-size:13px}.fromLine strong{color:#b43c68}
+.buttonArena{height:76px;width:min(100%,560px);margin:22px auto 0;position:relative;display:block;isolation:isolate;overflow:visible;touch-action:pan-y}
+.yesButton{position:absolute;left:50%;top:20px;transform:translateX(-50%);min-height:52px;z-index:2;white-space:nowrap}
+.noButton{position:absolute;z-index:1;min-height:46px;min-width:94px;border:1px solid #efd8e1;background:#fff8fb;color:#9c7b89;border-radius:14px;padding:11px 17px;font:600 13px 'DM Sans',sans-serif;transition:left .16s cubic-bezier(.16,1,.3,1);will-change:left;pointer-events:none;user-select:none;-webkit-user-select:none;cursor:default;box-shadow:0 6px 18px #9d35570c}
+.tinyNote{color:#b2929f;font-size:11px;margin:0}
+.heartBurst span{position:absolute;color:#ef9ab7;opacity:.65;pointer-events:none}.heartBurst span:nth-child(1){top:30px;left:12%;font-size:19px;transform:rotate(-20deg)}.heartBurst span:nth-child(2){top:76px;right:10%;font-size:15px}.heartBurst span:nth-child(3){top:165px;left:7%;font-size:12px}.heartBurst span:nth-child(4){top:245px;right:7%;font-size:20px}.heartBurst span:nth-child(5){top:22px;right:20%;font-size:10px}
+.yesCard{padding:58px 34px}.yesCard h1{font-size:clamp(44px,7vw,68px);margin:18px 0}.confetti{margin-top:28px;color:#d56b91;font-size:24px}.createAnother{margin-top:25px;display:grid;gap:10px}.createAnother a{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:#b33f6c;text-decoration:none;font-weight:700;font-size:13px}.createAnother a svg{transform:rotate(180deg)}.createAnother small{color:#b39aa5;font-size:11px}
+.footer{position:relative;z-index:1;text-align:center;color:#ad95a0;font-size:11px;display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap}.footer a{color:#805d6d;text-decoration:none}.footer svg{color:#c94d79}
+@media(max-width:520px){.page{padding:0 15px 20px}.topbar{height:68px}.shell{margin:38px auto 34px}.back{font-size:11px}.form{padding:21px;border-radius:22px}.proposalCard{padding:30px 18px 23px;border-radius:27px}.buttonArena{height:76px;width:calc(100% + 70px);max-width:none;margin-left:-35px;margin-right:-35px}.yesButton{left:50%;top:20px;padding:14px 12px;font-size:12px;transform:translateX(-50%)}.noButton{min-width:82px;padding:10px 12px;top:20px !important}.message{font-size:13px}.heartBurst span:nth-child(1){left:5%}.heartBurst span:nth-child(2){right:4%}.toLine{font-size:24px}.bigHeart{width:72px;height:72px}.copyRow{flex-wrap:wrap}.copyButton{min-height:40px}.heartBurst span:nth-child(4){right:3%}}
+@media(prefers-reduced-motion:reduce){.noButton,.primary,.yesButton,.back{transition:none}}
+
+/* Memorable, motion-rich proposal experience */
+.topActions{display:flex;align-items:center;gap:18px}
+.musicToggle{display:inline-flex;align-items:center;gap:7px;border:1px solid #efd7e1;background:rgba(255,255,255,.72);color:#a64b70;border-radius:999px;padding:9px 12px;font:600 11px 'DM Sans',sans-serif;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.musicToggle:hover{background:#fff0f6;border-color:#e8b8cb}
+.musicActive{background:#fbe5ed;box-shadow:0 0 0 4px #fbe5ed66}
+.floatingHearts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.floatingHearts span{position:absolute;bottom:-60px;color:#e9a2bb;opacity:0;font-size:18px;animation:floatHeart 16s linear infinite;text-shadow:0 5px 20px #dc7fa333}
+.floatingHearts span:nth-child(1){left:7%;animation-delay:0s;font-size:17px}.floatingHearts span:nth-child(2){left:19%;animation-delay:4s;font-size:24px}.floatingHearts span:nth-child(3){left:35%;animation-delay:8s;font-size:13px}.floatingHearts span:nth-child(4){left:61%;animation-delay:2s;font-size:20px}.floatingHearts span:nth-child(5){left:76%;animation-delay:6s;font-size:15px}.floatingHearts span:nth-child(6){left:89%;animation-delay:10s;font-size:22px}.floatingHearts span:nth-child(7){left:49%;animation-delay:12s;font-size:12px}.floatingHearts span:nth-child(8){left:95%;animation-delay:14s;font-size:16px}
+@keyframes floatHeart{0%{transform:translate3d(0,0,0) rotate(-12deg) scale(.8);opacity:0}12%{opacity:.5}55%{transform:translate3d(24px,-55vh,0) rotate(16deg) scale(1.08);opacity:.35}90%{opacity:.2}100%{transform:translate3d(-18px,-115vh,0) rotate(-10deg) scale(.9);opacity:0}}
+.reveal{animation:cardReveal .85s cubic-bezier(.2,.8,.2,1) both}
+@keyframes cardReveal{0%{opacity:0;transform:translateY(24px) scale(.975);filter:blur(5px)}65%{opacity:1;filter:blur(0)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.proposalCard .bigHeart,.yesCard .bigHeart{position:relative;animation:heartBreathe 3.4s ease-in-out infinite}
+.heartHalo{position:absolute;inset:-8px;border:1px solid #eaa2bd;border-radius:32px;animation:haloPulse 2.8s ease-out infinite;pointer-events:none}
+@keyframes heartBreathe{0%,100%{transform:rotate(-5deg) scale(1)}50%{transform:rotate(-2deg) scale(1.045)}}
+@keyframes haloPulse{0%{transform:scale(.92);opacity:.65}100%{transform:scale(1.3);opacity:0}}
+.littleLabel{display:flex;align-items:center;justify-content:center;gap:6px;margin:0 auto 6px;color:#c06a8b;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.yesCard{animation:cardReveal .8s cubic-bezier(.2,.8,.2,1) both}
+.yesCard .bigHeart{background:linear-gradient(145deg,#ffdce9,#f1a8c5);box-shadow:0 12px 32px #d85b8a2e,inset 0 1px 0 #fff9}
+.yesCard h1{animation:yesPop .65s .2s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes yesPop{0%{transform:scale(.65);opacity:0}100%{transform:scale(1);opacity:1}}
+.celebrationGlow{position:absolute;inset:-40%;pointer-events:none;background:radial-gradient(circle at 50% 32%,#ffe0eb 0,transparent 38%);animation:glowPulse 4s ease-in-out infinite}
+@keyframes glowPulse{0%,100%{opacity:.5;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+.confetti{display:flex;justify-content:center;align-items:center;gap:17px;position:relative}
+.confetti span{display:inline-block;animation:confettiDance 1.8s ease-in-out infinite;color:#d56b91}
+.confetti span:nth-child(2n){animation-delay:.2s;color:#efad73}.confetti span:nth-child(3n){animation-delay:.45s;color:#bca1d9}
+@keyframes confettiDance{0%,100%{transform:translateY(0) rotate(0) scale(1)}50%{transform:translateY(-11px) rotate(16deg) scale(1.18)}}
+.loveNote{position:relative;margin:24px 0 0;color:#b18a9b;font-family:'Playfair Display',serif;font-style:italic;font-size:14px}
+@media(max-width:520px){.topActions{gap:9px}.musicToggle{padding:8px 9px}.musicToggle span{display:none}.floatingHearts span{font-size:14px}.littleLabel{font-size:8px}.confetti{gap:11px}}
+@media(prefers-reduced-motion:reduce){.floatingHearts span,.reveal,.proposalCard .bigHeart,.yesCard .bigHeart,.heartHalo,.yesCard h1,.celebrationGlow,.confetti span{animation:none!important}.reveal{opacity:1;transform:none;filter:none}}
+
+/* Shareable proposal-link generator */
+.shareReady{animation:cardReveal .55s cubic-bezier(.2,.8,.2,1) both;border-color:#ecc7d6;background:linear-gradient(145deg,#fff 0%,#fff8fb 100%)}
+.readyHeading{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+.readyHeading>div{min-width:0}
+.readyHeading p{margin:0 0 4px;font-weight:700;color:#6f304b;font-size:15px}
+.readyHeading small{display:block;color:#a17d8c;font-size:11px}
+.readyIcon{width:34px;height:34px;display:grid;place-items:center;flex-shrink:0;border-radius:12px;background:#e4f6e9;color:#348552}
+.shareActions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:11px}
+.whatsappButton,.previewButton{min-height:42px;display:flex;align-items:center;justify-content:center;gap:7px;border-radius:12px;text-decoration:none;font:700 11px 'DM Sans',sans-serif;cursor:pointer;transition:transform .2s,filter .2s,background .2s}
+.whatsappButton{border:0;background:#218b5a;color:white;padding:10px 12px;box-shadow:0 7px 16px #218b5a20}
+.previewButton{border:1px solid #eed6e0;background:white;color:#9f3a63;padding:10px 12px}
+.whatsappButton:hover,.previewButton:hover{transform:translateY(-1px);filter:saturate(1.08)}
+.shareDisclaimer{display:block;color:#a28b95;margin-top:13px;line-height:1.6;font-size:10px}
+@media(max-width:520px){.shareActions{grid-template-columns:1fr}.whatsappButton,.previewButton{min-height:44px}.readyHeading p{font-size:14px}}
+
+/* Personalization controls and shareable theme palettes */
+.form select,.form textarea{width:100%;min-width:0;border:1px solid #ecd5df;border-radius:13px;background:#fff;padding:13px 15px;font:inherit;color:#39232d;outline:none;transition:border-color .2s,box-shadow .2s;resize:vertical}
+.form select:focus,.form textarea:focus{border-color:#d56b91;box-shadow:0 0 0 4px #f9e1ea}
+.fieldHint{margin:-12px 0 0;color:#a28b95;font-size:10px;line-height:1.55}
+.proposalPhoto{display:block;width:min(100%,330px);max-height:250px;object-fit:cover;margin:20px auto 22px;border-radius:22px;border:5px solid rgba(255,255,255,.9);box-shadow:0 14px 38px #9d35571b}
+.themeRose{--theme-accent:#c74676;--theme-deep:#b53265;--theme-soft:#ffe5ef;--theme-border:#f0d4df;--theme-ink:#38212d;--theme-muted:#806775}
+.themeLavender{--theme-accent:#8966bd;--theme-deep:#6f4aa4;--theme-soft:#eee6ff;--theme-border:#ded2f2;--theme-ink:#30243f;--theme-muted:#786a89;background:radial-gradient(ellipse at 50% 0%,#eee4ff 0%,#faf6ff 35%,#fff 100%)}
+.themeSunset{--theme-accent:#d46a52;--theme-deep:#b94b3c;--theme-soft:#ffe6d6;--theme-border:#f2d0c1;--theme-ink:#432a29;--theme-muted:#8c6a62;background:radial-gradient(ellipse at 50% 0%,#ffe0cb 0%,#fff4ec 34%,#fff 100%)}
+.themeMidnight{--theme-accent:#c49be9;--theme-deep:#9b72cb;--theme-soft:#352943;--theme-border:#5d4b70;--theme-ink:#f9efff;--theme-muted:#d0bfdc;background:radial-gradient(ellipse at 50% 0%,#30213f 0%,#21182c 48%,#17121f 100%);color:var(--theme-ink)}
+.themeLavender .eyebrow,.themeSunset .eyebrow,.themeMidnight .eyebrow{border-color:var(--theme-border);color:var(--theme-accent)}
+.themeLavender .shell h1 span,.themeLavender .question span,.themeLavender .yesCard h1 span,.themeSunset .shell h1 span,.themeSunset .question span,.themeSunset .yesCard h1 span,.themeMidnight .shell h1 span,.themeMidnight .question span,.themeMidnight .yesCard h1 span{color:var(--theme-accent)}
+.themeLavender .proposalCard,.themeLavender .yesCard,.themeSunset .proposalCard,.themeSunset .yesCard{border-color:var(--theme-border)}
+.themeLavender .bigHeart,.themeSunset .bigHeart{background:linear-gradient(145deg,var(--theme-soft),#fff);color:var(--theme-accent)}
+.themeMidnight .proposalCard,.themeMidnight .yesCard{background:rgba(37,27,49,.94);border-color:var(--theme-border);box-shadow:0 30px 90px #08040f70}
+.themeMidnight .message,.themeMidnight .fromLine,.themeMidnight .toLine,.themeMidnight .tinyNote,.themeMidnight .loveNote{color:var(--theme-muted)}
+.themeMidnight .fromLine strong,.themeMidnight .littleLabel{color:var(--theme-accent)}
+.themeMidnight .bigHeart{background:linear-gradient(145deg,#514064,#392747);color:var(--theme-accent)}
+.themeMidnight .heartHalo{border-color:#c49be9}
+.themeMidnight .noButton{background:#30243d;border-color:#574567;color:#ddcde8}
+.themeMidnight .brand{color:#f9efff}.themeMidnight .topbar{border-color:#493751}.themeMidnight .back{color:#c7b2d7}.themeMidnight .musicToggle{background:#30243d;border-color:#574567;color:#e0c9f5}.themeMidnight .footer{color:#b6a2c5}.themeMidnight .footer a{color:#e3c9fa}
+.themeMidnight .floatingHearts span{color:#c49be9}
+@media(max-width:520px){.proposalPhoto{max-height:210px;border-radius:17px}.fieldHint{font-size:10px}}
+
+/* A fuller, more celebratory YES moment */
+.yesCard{isolation:isolate;background:linear-gradient(155deg,rgba(255,255,255,.98),rgba(255,244,249,.97));border-color:#efc1d4;box-shadow:0 35px 110px #a83e681f,0 0 0 8px #fff7fa,0 0 0 9px #f6dbe6;padding-top:54px;padding-bottom:38px}
+.yesCard>*{position:relative;z-index:1}
+.yesCard .celebrationGlow{z-index:0;inset:-15%;background:radial-gradient(ellipse at 50% 24%,#ffd7e7 0,rgba(255,231,241,.52) 26%,transparent 62%)}
+.yesBadge{width:max-content;max-width:100%;margin:0 auto 24px;display:flex;align-items:center;justify-content:center;gap:7px;padding:8px 13px;border:1px solid #f0cada;border-radius:999px;background:#fff8fb;color:#bd4c79;font-size:9px;font-weight:800;letter-spacing:.13em;box-shadow:0 6px 20px #c7467610}
+.yesCard .bigHeart{width:96px;height:96px;border-radius:34px;color:#fff;background:linear-gradient(145deg,#f08ab1,#c83e78);box-shadow:0 15px 34px #cb4b803d,inset 0 1px 0 #ffffff8a;transform:rotate(-5deg)}
+.yesCard .bigHeart svg{filter:drop-shadow(0 4px 8px #a92c5c44);animation:heartCelebrate 1.05s .25s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes heartCelebrate{0%{transform:scale(.25) rotate(-25deg)}65%{transform:scale(1.25) rotate(8deg)}100%{transform:scale(1) rotate(0)}}
+.yesCard .littleLabel{margin-top:4px}
+.yesCard .toLine{font-size:clamp(23px,4vw,30px);line-height:1.35;color:#684355;margin-top:13px}
+.yesCard h1{margin:13px 0 19px;text-shadow:0 5px 25px #d65a8a18}
+.yesCard .message{position:relative;max-width:470px;color:#765364}
+.celebrationRays{position:absolute!important;z-index:0!important;width:310px;height:310px;left:50%;top:5px;transform:translateX(-50%);border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(235,151,183,.12) 0deg 7deg,transparent 7deg 15deg);mask-image:radial-gradient(circle,transparent 0 35%,#000 65%,transparent 72%);animation:raysTurn 40s linear infinite;pointer-events:none}
+@keyframes raysTurn{to{transform:translateX(-50%) rotate(360deg)}}
+.confettiShower{position:absolute!important;inset:0;z-index:0!important;overflow:hidden;pointer-events:none}
+.confettiShower span{position:absolute;top:-12%;left:calc((var(--i, 0) * 3.2%) + 2%);font-size:15px;color:#d45b8a;opacity:0;animation:confettiFall 3.7s ease-in infinite}
+.confettiShower span:nth-child(5n+1){left:4%;animation-delay:.05s;color:#d45b8a}.confettiShower span:nth-child(5n+2){left:18%;animation-delay:.65s;color:#e7a25f}.confettiShower span:nth-child(5n+3){left:38%;animation-delay:1.1s;color:#b99bdb}.confettiShower span:nth-child(5n+4){left:64%;animation-delay:.35s;color:#d45b8a}.confettiShower span:nth-child(5n){left:88%;animation-delay:1.45s;color:#e7a25f}
+.confettiShower span:nth-child(3n){font-size:21px}.confettiShower span:nth-child(4n){font-size:10px}
+@keyframes confettiFall{0%{transform:translateY(-10px) rotate(0) scale(.7);opacity:0}12%{opacity:.8}78%{opacity:.85}100%{transform:translateY(520px) rotate(560deg) scale(1.05);opacity:0}}
+.celebrationPhoto{display:block;width:min(100%,280px);max-height:220px;object-fit:cover;margin:24px auto 0;border:5px solid #fff;border-radius:22px;box-shadow:0 14px 36px #a83e6824;transform:rotate(-1.5deg);animation:photoReveal .8s .3s both}
+@keyframes photoReveal{from{opacity:0;transform:translateY(12px) rotate(-4deg) scale(.94)}to{opacity:1;transform:translateY(0) rotate(-1.5deg) scale(1)}}
+.celebrationPromise{display:flex;align-items:center;justify-content:center;gap:12px;max-width:440px;margin:25px auto 0;padding:15px 17px;border:1px solid #f4dce6;border-radius:18px;background:#fff9fc;color:#8c6376}
+.celebrationPromise span{font-size:22px;color:#cf5b87}.celebrationPromise p{margin:0;font-family:'Playfair Display',serif;font-size:15px;line-height:1.55;font-style:italic}
+.celebrationShare{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:22px;padding:12px 17px;border-radius:999px;background:#218b5a;color:#fff;text-decoration:none;font-size:12px;font-weight:700;box-shadow:0 8px 20px #218b5a22;transition:transform .2s,box-shadow .2s}.celebrationShare:hover{transform:translateY(-2px);box-shadow:0 12px 25px #218b5a30}
+.confetti{margin-top:24px}.loveNote{margin-top:18px}
+.preview-proposal .preview-copy strong{font-family:'Playfair Display',Georgia,serif}
+@media(max-width:520px){.yesCard{padding:35px 18px 28px}.yesBadge{font-size:8px;margin-bottom:20px}.yesCard .bigHeart{width:82px;height:82px}.celebrationPromise{padding:12px 10px;gap:8px}.celebrationPromise p{font-size:13px}.celebrationPhoto{max-height:180px}}
+@media(prefers-reduced-motion:reduce){.yesCard .bigHeart svg,.celebrationRays,.confettiShower span,.celebrationPhoto{animation:none!important}.confettiShower span{opacity:.45;top:8%}}

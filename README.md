@@ -1,0 +1,72 @@
+# Shiras VM — Cloudflare Pages static portfolio
+
+This project preserves the existing single-page portfolio UI and exports it as static HTML, CSS, and JavaScript. It is configured for **Cloudflare Pages static hosting**, not Cloudflare Workers/OpenNext.
+
+## Requirements
+
+- Node.js 20.9 or newer (Node.js 22 LTS recommended)
+- npm
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Build and check
+
+```bash
+npm install
+npm run typecheck
+npm run build
+```
+
+With `output: 'export'`, Next.js writes the static website to `out/`.
+
+## Cloudflare Pages settings
+
+Connect the repository to Cloudflare Pages and use:
+
+- **Framework preset:** Next.js (Static HTML Export) or None
+- **Build command:** `npm run build`
+- **Build output directory:** `out`
+- **Root directory:** the directory containing this `package.json` (leave blank if it is the repository root)
+- **Environment variable:** `NODE_VERSION` = `22`
+
+Do not use `npx wrangler deploy`, `bun deploy`, `.next`, or the OpenNext adapter for this static Pages deployment. If the GitHub repository was previously migrated to OpenNext, remove the old `open-next.config.ts`, `wrangler.jsonc` / `wrangler.toml`, `.dev.vars`, `.open-next/`, and any stale `bun.lock` / `bun.lockb` from that repository before committing this static-export version. Commit the package files from this project and use npm consistently.
+
+## Security notes
+
+- `public/_headers` adds baseline browser security headers and long-lived caching for hashed Next.js assets.
+- External links opened in new tabs use `rel="noopener noreferrer"` where applicable.
+- This site has no API routes, server actions, database credentials, or server-side secrets.
+- Contact links use `mailto:` and do not send form data to a server.
+- Never put private tokens or credentials in client-side code or `NEXT_PUBLIC_*` variables.
+- Static export does not support request-time rendering, Next.js API routes, middleware, or server actions. Reassess hosting if those features are added later.
+
+## Before publishing
+
+- Replace placeholder GitHub/social links with your actual profile URLs.
+- Verify project demo URLs.
+- The downloadable CV is included at `public/Shiras-VM-CV.pdf`; replace it whenever your resume changes.
+- The portfolio favicon is defined in `app/icon.svg`.
+- Review the Content Security Policy if you add third-party scripts, analytics, external fonts, or embedded media.
+
+## SEO and search discoverability
+
+- The document title, meta description, canonical URL, Open Graph metadata, and large social-sharing image are configured in `app/layout.tsx` and `public/og-image.png`.
+- The existing `app/icon.svg` provides the portfolio favicon.
+- `app/sitemap.ts` generates `/sitemap.xml`; `app/robots.ts` generates `/robots.txt` and points crawlers to the sitemap.
+- Person structured data identifies the portfolio owner and links the public GitHub and LinkedIn profiles.
+
+### Publish and request indexing
+
+1. Deploy the site to `https://shiras.dev` and confirm HTTPS works without certificate errors.
+2. Open `https://shiras.dev/robots.txt`, `https://shiras.dev/sitemap.xml`, and `https://shiras.dev/og-image.png` to confirm they load.
+3. Add and verify `shiras.dev` in [Google Search Console](https://search.google.com/search-console/).
+4. In Search Console, submit `https://shiras.dev/sitemap.xml` in **Sitemaps**.
+5. Use **URL Inspection** for `https://shiras.dev/`, run **Test Live URL**, then select **Request Indexing** if available.
+6. In LinkedIn's Post Inspector, enter `https://shiras.dev/` to refresh the cached Open Graph preview after deployment.
+
+Submitting a sitemap or requesting indexing does not guarantee indexing or a particular ranking. Search Console is required to check the actual Google index status; this project package alone cannot verify live indexing.
